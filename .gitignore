@@ -1,0 +1,51 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment/secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# R
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+renv/library/
+renv/staging/
+
+# Node
+node_modules/
+.next/
+dist/
+build/
+coverage/
+
+# Local external sources and restricted test material
+external/vendor/
+external/restricted/
+external/downloads/
+
+# Data: never commit participant-level/raw exports by default
+data/raw/
+data/private/
+data/derived-private/
+*.parquet
+*.feather
+
+# Generated research outputs
+reports/generated/
+artifacts/
