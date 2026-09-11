@@ -1,25 +1,15 @@
-# R Reference Environment
+# R reference environment
 
-This directory will contain the canonical psychometric implementation.
+See [RUNTIME.md](RUNTIME.md) for the exact runtime, restore command, and deterministic seed policy.
 
-## Bootstrap
+The initial package set is `psych`, `mirt`, `lavaan`, `TAM`, and `catR`. `catR` is present for later simulation/research only; no CAT implementation belongs in this bootstrap.
 
-1. Install current stable R.
-2. From this directory, initialize `renv` (`renv::init()`).
-3. Install only the packages required by the current study; freeze with `renv::snapshot()`.
-4. Commit `renv.lock` but not `renv/library/`.
+Restore and verify from this directory:
 
-Initial packages to evaluate:
-
-```r
-install.packages(c(
-  "renv",
-  "psych",
-  "mirt",
-  "lavaan",
-  "TAM",
-  "catR"
-))
+```sh
+Rscript -e 'renv::restore(prompt = FALSE, transactional = TRUE)'
+Rscript smoke_test.R
+Rscript session_info.R
 ```
 
-Do not add CAT complexity until Study 001 fixed-form scoring is reproduced.
+Commit `renv.lock`, `.Rprofile`, and `renv/activate.R`/settings as needed for project activation. Never commit `renv/library/` or staging files.
