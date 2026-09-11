@@ -1,0 +1,32 @@
+schema_version: 1
+updated: 2026-09-11
+# Pins are bootstrap reproducibility anchors, not claims that these are the newest scientific releases forever.
+git_sources:
+  - id: mars-irt
+    url: https://github.com/ndawlab/mars-irt.git
+    ref: 04eecdaf77d0ee657c65351eab5ed9e744b1ce14
+    destination: external/vendor/mars-irt
+    redistribute_in_openiq: review_before_vendoring
+  - id: testmybrain-code
+    url: https://github.com/manybrainsproject/TestMyBrainCodeRepo.git
+    ref: ec09ea0d35779bb39997131313dfd1380ee34922
+    destination: external/vendor/testmybrain
+    redistribute_in_openiq: preserve_upstream_lgpl_and_stimulus_licenses
+  - id: opencogdata
+    url: https://github.com/nimh-dsst/OpenCogData.git
+    ref: aef5a7149eff8f1120e9ef6fd7b3c25f7bc8e63c
+    destination: external/vendor/opencogdata
+    redistribute_in_openiq: metadata_only_by_default
+manual_sources:
+  - id: omib
+    url: https://osf.io/4km79/
+    destination: external/downloads/omib
+    note: Verify OSF file-level metadata/license and record checksums before moving anything into tracked paths.
+  - id: mars-stimuli
+    url: https://osf.io/g96f4/
+    destination: external/downloads/mars-stimuli
+    note: Stimuli are separate from the mars-irt Git repository; verify source-specific terms.
+  - id: icar
+    url: https://icar-project.com/
+    destination: external/restricted/icar
+    note: Follow current registration/guidance. Do not commit protected items, scoring keys, or restricted psychometric material.

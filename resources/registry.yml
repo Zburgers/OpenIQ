@@ -1,0 +1,76 @@
+schema_version: 1
+updated: 2026-09-11
+sources:
+  - id: testing-standards-2014
+    kind: standard
+    name: Standards for Educational and Psychological Testing
+    url: https://www.testingstandards.net/open-access-files.html
+    acquisition: link_only
+    role: governance
+  - id: itc-tech-assessment
+    kind: guideline
+    name: ITC/ATP Guidelines for Technology-Based Assessment
+    url: https://www.intestcom.org/page/16
+    acquisition: link_only
+    role: digital_assessment_governance
+  - id: itc-test-security
+    kind: guideline
+    name: ITC Guidelines on Test Security
+    url: https://www.intestcom.org/page/18
+    acquisition: link_only
+    role: test_security
+  - id: icmr-ethics
+    kind: guideline_collection
+    name: ICMR ethics and research integrity guidance
+    url: https://www.icmr.gov.in/guidelines
+    acquisition: link_only
+    role: ethics_india
+  - id: mars-original
+    kind: paper_and_materials
+    name: MaRs-IB original item bank
+    doi: 10.1098/rsos.190232
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6837216/
+    role: fluid_reasoning
+  - id: mars-irt
+    kind: git_repository
+    name: MaRs-IB IRT calibration and validation
+    doi: 10.3758/s13428-023-02067-8
+    url: https://github.com/ndawlab/mars-irt
+    pin: 04eecdaf77d0ee657c65351eab5ed9e744b1ce14
+    license: MIT
+    role: primary_v0_1_reference
+  - id: omib
+    kind: osf_resource
+    name: Open Matrices Item Bank
+    doi: 10.3390/jintelligence10030041
+    url: https://osf.io/4km79/
+    license: GPL-3.0-as-stated-by-paper
+    role: independent_matrix_replication
+  - id: icar
+    kind: controlled_research_resource
+    name: International Cognitive Ability Resource
+    url: https://icar-project.com/
+    guidance: https://icar-project.com/attachments/download/138/Guidelines.pdf
+    role: multidomain_benchmark
+    security_review_required: true
+  - id: icar-sapa-data
+    kind: open_data_publication
+    name: Selected ICAR Data from the SAPA-Project
+    doi: 10.5334/jopd.25
+    url: https://doi.org/10.5334/jopd.25
+    role: replication_and_structure
+  - id: testmybrain-code
+    kind: git_repository
+    name: TestMyBrain cognitive test code
+    url: https://github.com/manybrainsproject/TestMyBrainCodeRepo
+    pin: ec09ea0d35779bb39997131313dfd1380ee34922
+    code_license: LGPL-3.0
+    stimuli_license_default: CC-BY-SA-4.0-unless-task-says-otherwise
+    role: multidomain_digital_tasks
+  - id: opencogdata
+    kind: git_repository
+    name: OpenCogData
+    url: https://github.com/nimh-dsst/OpenCogData
+    pin: aef5a7149eff8f1120e9ef6fd7b3c25f7bc8e63c
+    license: MIT
+    role: dataset_discovery
