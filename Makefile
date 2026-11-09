@@ -17,7 +17,4 @@ study-001:
 	@if [ -x studies/001-mars-replication/run.sh ]; then studies/001-mars-replication/run.sh; else echo "Study 001 runner not implemented yet; follow PROTOCOL.md"; exit 2; fi
 
 check-provenance:
-	@test -f resources/SOURCES.md
-	@test -f resources/registry.yml
-	@test -f external/sources.lock.yml
-	@echo "Core provenance files present"
+	./scripts/check_provenance.sh
